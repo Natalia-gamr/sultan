@@ -1,0 +1,93 @@
+.wrap {
+
+    max-width: 1366px;
+    margin: 0 auto;
+    padding-top: 45px;
+
+}
+
+.product {
+    display: flex;
+    margin: 50px 0;
+    gap: 50px;
+}
+
+.img {
+    flex-basis: 100%;
+    display: block;
+
+}
+
+.img img {
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+
+.prodWrap {
+    flex-basis: 100%;
+}
+
+.inStock {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #1FD85D;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 150%;
+    color: #111111;
+}
+
+.title span {
+    font-weight: 400;
+
+}
+
+.price {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 130%;
+    /* identical to box height, or 39px */
+
+
+    /* 1 */
+
+    color: #111111;
+}
+
+.priceWrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.brand {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+
+    /* 2 */
+
+    color: #3F4E65;
+
+}
+
+.brand span {
+    font-weight: 500;
+
+
+    color: #111111;
+
+}
+
+.share,
+.desc {
+    margin: 30px 0;
+}

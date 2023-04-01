@@ -1,0 +1,86 @@
+.sidebar {
+    max-width: 300px;
+}
+
+.active~.label:before {
+    background: var(--yellow);
+
+}
+
+.input {
+    opacity: 0.1;
+    width: 10px;
+    height: 10px;
+}
+
+
+.label:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--gray-dark);
+    position: absolute;
+    top: 3px;
+    left: -15px;
+}
+
+.label {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.filter {
+    display: grid;
+}
+
+.filter button {
+    display: block;
+    width: 95%;
+    height: 100%;
+    box-shadow: none;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.button {
+    height: 39px;
+}
+
+.searchButton {
+    position: absolute;
+    z-index: 10;
+    width: 39px;
+    height: 39px;
+    top: 10px;
+    right: 14px;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+}
+
+.inputPrice {
+    height: 23px;
+    width: 100px;
+    background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+    border-radius: 20px;
+    border: none;
+    padding: 8px;
+}
+
+.inputWrap {
+    display: flex;
+    gap: 10px;
+}

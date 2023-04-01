@@ -1,0 +1,44 @@
+.button {
+    background: var(--yellow-light);
+    border-radius: 80px;
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.xs {
+    height: 39px;
+    width: 39px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 0 14px;
+}
+
+.s {
+    height: 45px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.15em;
+    padding: 0 25px;
+
+}
+
+.m {
+    height: 59px;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 50px;
+
+}
+
+.l {
+    height: 95px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.15em;
+    padding: 0 80px;
+
+}

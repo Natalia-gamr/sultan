@@ -1,0 +1,318 @@
+{
+  "products": [{
+      "url": "https://ir.ozone.ru/s3/multimedia-1/wc1000/6393162481.jpg",
+      "title": "A-derma",
+      "type": "мл",
+      "val": "500",
+      "barecode": "00015689",
+      "manufacture": "Pierre Fabre",
+      "brand": "A-derma",
+      "descr": "Очищающий гель для душа для сухой и атопичной кожи",
+      "price": "125",
+      "care": "уход за телом, уход за лицом, уход за волосами",
+      "count": 1
+    },
+    {
+
+      "url": "https://ir.ozone.ru/s3/multimedia-9/wc1000/6424121337.jpg",
+      "title": "Clear MEN",
+      "type": "мл",
+      "val": "400",
+      "barecode": "00015690",
+      "manufacture": "Unilever",
+      "brand": "Clear",
+      "descr": "мужской шампунь против перхоти Ледяная свежесть",
+      "price": "108",
+      "care": "уход за волосами",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.letu.ru/common/img/marketplace/2abe4fd5-4789-47d7-9ddd-b13af9cd17e0.jpg",
+      "title": "СОЛЮШКА",
+      "type": "г",
+      "val": "800",
+      "barecode": "00015691",
+      "manufacture": "OOO СОЛЮШКА",
+      "brand": "СОЛЮШКА",
+      "descr": "Английская детская соль для ванны",
+      "price": "56",
+      "care": "уход за телом",
+      "count": 1
+    },
+    {
+      "url": "https://ir.ozone.ru/s3/multimedia-e/wc1000/6421304486.jpg",
+      "title": "Чистая Линия",
+      "type": "мл",
+      "val": "400",
+      "barecode": "00015692",
+      "manufacture": "Unilever",
+      "brand": "Чистая Линия",
+      "descr": "ДЕТСКАЯ ГЕЛЬ-ПЕНА ДЛЯ ДУША 2 В 1",
+      "price": "65",
+      "care": "уход за телом",
+      "count": 1
+    },
+    {
+      "url": "https://ir.ozone.ru/s3/multimedia-6/wc1000/6154806630.jpg",
+      "title": "Vichy Dercos",
+      "type": "мл",
+      "val": "390",
+      "barecode": "00015693",
+      "manufacture": "Л'Ореаль",
+      "brand": "Vichy",
+      "descr": "Интенсивный шампунь против перхоти",
+      "price": "165",
+      "care": "уход за волосами",
+      "count": 1
+    },
+    {
+      "url": "https://ir.ozone.ru/s3/multimedia-s/wc1000/6500204044.jpg",
+      "title": "Thalgo",
+      "type": "мл",
+      "val": "200",
+      "barecode": "00015694",
+      "manufacture": "Thalgo Cosmetic",
+      "brand": "Thalgo",
+      "descr": "Морской гель для душа",
+      "price": "42",
+      "care": "уход за телом",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/eh99989436475-1.jpg",
+      "title": "Eveline Cosmetics",
+      "type": "мл",
+      "val": "400",
+      "barecode": "00015695",
+      "manufacture": "EVELINE COSMETICS",
+      "brand": "Eveline Cosmetics",
+      "descr": "Гиалуроновая мицеллярная вода 3 в 1",
+      "price": "45",
+      "care": "уход за лицом",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/3337872414145-sign-primarypackshot-198.jpeg",
+      "title": "La Roche-Posay Cicaplast",
+      "type": "мл",
+      "val": "50",
+      "barecode": "00015696",
+      "manufacture": "Л'Ореаль",
+      "brand": "La Roche-Posay",
+      "descr": "Крем-барьер для рук",
+      "price": "65",
+      "care": "уход за руками",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/3337872411991-sign-primarypackshot-167.jpeg",
+      "title": "La Roche-Posay Effaclar",
+      "type": "мл",
+      "val": "400",
+      "barecode": "00015697",
+      "manufacture": "Л'Ореаль",
+      "brand": "La Roche-Posay",
+      "descr": "очищающий гель",
+      "price": "165",
+      "care": "уход за телом, уход за лицом ",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/17214611-00.jpg",
+      "title": "Vichy",
+      "type": "мл",
+      "val": "50",
+      "barecode": "00015698",
+      "manufacture": "Л'Ореаль",
+      "brand": "Vichy",
+      "descr": "Дезодорант- шарик",
+      "price": "178",
+      "care": "уход за телом",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/u05886.jpg",
+      "title": "Uriage",
+      "type": "мл",
+      "val": "500",
+      "barecode": "00015699",
+      "manufacture": "laboratoires dermatologiques Uriage",
+      "brand": "Uriage",
+      "descr": "Гель для интимной гигиены",
+      "price": "149",
+      "care": "уход за телом",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/4000026-.jpg",
+      "title": "Sesderma",
+      "type": "мл",
+      "val": "300",
+      "barecode": "00015700",
+      "manufacture": "SESDERMA",
+      "brand": "Sesderma",
+      "descr": "Крем-пенка для умывания",
+      "price": "195",
+      "care": "уход за лицом",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/eh99989436215-1.jpg",
+      "title": "Meine Liebe",
+      "type": "г",
+      "val": "1000",
+      "barecode": "00015701",
+      "manufacture": "ООО 'ЗетТек'",
+      "brand": "Meine Liebe",
+      "descr": "Стиральный порошок-концентрат для детского белья 0+",
+      "price": "156",
+      "care": "бытовая химия",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/eh99989406962-1.jpg",
+      "title": "Neutrale",
+      "type": "мл",
+      "val": "950",
+      "barecode": "00015702",
+      "manufacture": "ООО 'СвиссФарм'",
+      "brand": "Neutrale",
+      "descr": " Гель для стирки цветных и белых вещей универсальный",
+      "price": "183",
+      "care": "бытовая химия",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/eh99989413669-1-min.jpg",
+      "title": "Molecola",
+      "type": "мл",
+      "val": "1000",
+      "barecode": "00015703",
+      "manufacture": "ООО 'Амада БИО'",
+      "brand": "Molecola",
+      "descr": "Экологичный смягчитель ткани 'Королевский ирис'",
+      "price": "165",
+      "care": "бытовая химия",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/17_0022.jpg",
+      "title": "Synergetic",
+      "type": "мл",
+      "val": "2750",
+      "barecode": "00015704",
+      "manufacture": "ООО 'Синергетик'",
+      "brand": "Synergetic",
+      "descr": "Гель для стирки всех видов тканей гиппоалергенный",
+      "price": "347",
+      "care": "бытовая химия",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/synergetic-1.jpg",
+      "title": "Synergetic",
+      "type": "мл",
+      "val": "500",
+      "barecode": "00015705",
+      "manufacture": "ООО 'Синергетик'",
+      "brand": "Synergetic",
+      "descr": "Жидкое мыло 'Луговые травы'",
+      "price": "86",
+      "care": "уход за телом, уход за руками",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/eh99989436263-1.jpg",
+      "title": "Meine Liebe",
+      "type": "мл",
+      "val": "800",
+      "barecode": "00015706",
+      "manufacture": "ООО 'ЗетТек'",
+      "brand": "Meine Liebe",
+      "descr": "Кондиционер-концентрат для белья",
+      "price": "156",
+      "care": "бытовая химия",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/21_0010.jpg",
+      "title": "Synergetic",
+      "type": "мл",
+      "val": "500",
+      "barecode": "00015707",
+      "manufacture": "ООО 'Синергетик'",
+      "brand": "Synergetic",
+      "descr": "Средство для мытья посуды 'Сочный апельсин'",
+      "price": "89",
+      "care": "бытовая химия",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/eh99989436269-1.jpg",
+      "title": "Meine Liebe",
+      "type": "мл",
+      "val": "1800",
+      "barecode": "00015708",
+      "manufacture": "ООО 'ЗетТек'",
+      "brand": "Meine Liebe",
+      "descr": "Универсальный гель-концентрат для стирки Extra Clean",
+      "price": "256",
+      "care": "бытовая химия",
+      "count": 1
+
+    },
+    {
+      "url": "https://www.pharmacosmetica.ru/files/pharmacosmetica/reg_images/1509-02-08-2.jpg",
+      "title": "BioMio",
+      "type": "мл",
+      "val": "1500",
+      "barecode": "00015709",
+      "manufacture": "BIO-MIO",
+      "brand": "BioMio",
+      "descr": "Гель для стирки деликатных тканей, без запаха",
+      "price": "126",
+      "care": "бытовая химия",
+      "count": 1
+
+    }
+  ],
+  "filter": [{
+      "name": "Все",
+      "id": "00"
+    }, {
+      "name": "Уход за руками",
+      "id": "01"
+    },
+    {
+      "name": "Уход за телом",
+      "id": "02"
+    },
+    {
+      "name": "Уход за волосами",
+      "id": "03"
+    },
+    {
+      "name": "Уход за лицом",
+      "id": "04"
+    },
+    {
+      "name": "Бытовая химия",
+      "id": "05"
+    }
+  ]
+}

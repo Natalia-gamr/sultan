@@ -1,0 +1,113 @@
+.card {
+    width: 326px;
+    height: 450px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 14px 39px -11px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    display: grid;
+}
+
+.img {
+    height: 180px;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.val {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    /* identical to box height, or 16px */
+
+
+    /* 2 */
+
+    color: #3F4E65;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 10px;
+}
+
+.descr {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.barecode {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+
+    /* 2 */
+    margin-bottom: 5px;
+    color: #3F4E65;
+}
+
+.barecode span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.manufacture {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+
+    /* 2 */
+    margin-bottom: 5px;
+    color: #3F4E65;
+}
+
+.manufacture span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.brand {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+
+
+    /* 2 */
+    margin-bottom: 5px;
+    color: #3F4E65;
+}
+
+.brand span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #111111;
+}
+
+
+.price {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* identical to box height, or 21px */
+
+
+    /* 1 */
+
+    color: #111111;
+}

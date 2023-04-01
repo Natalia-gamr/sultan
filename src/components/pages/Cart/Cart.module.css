@@ -1,0 +1,65 @@
+.cart {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding-top: 45px;
+    position: relative;
+}
+
+.nav {
+    margin-bottom: 30px;
+}
+
+.card {
+    display: flex;
+    max-height: 500px;
+    align-items: center;
+    margin: 50px 0;
+    gap: 50px;
+}
+
+.img {
+    max-height: 280px;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.imgWrap {
+    width: 25%;
+}
+
+.descrWrap {
+    flex-basis: 35%;
+}
+
+.count {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+
+
+.total {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup {
+    display: none;
+}
+
+.popupBlock {
+    width: 450px;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 18px;
+    display: block;
+    position: fixed;
+    top: 50%;
+    background-color: white;
+    z-index: 10;
+    border: 1px solid black;
+    left: calc(50vw - (450px / 2));
+}
