@@ -88,16 +88,13 @@ export const Cart = ({ ...props }: CartProps) => {
                         <div className={styles.card}>
                             <div className={styles.imgWrap} ><img className={styles.img} src={i.url} alt="" /></div>
                             <div className={styles.descrWrap}>
-                                <div>{i.val}{i.type}</div>
-                                <div>{i.title}{i.descr}</div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. </div>
+                                <div className={styles.val}>{i.val} {i.type}</div>
+                                <div className={styles.title}>{i.title} {i.descr}</div>
+                                <div className={styles.descr}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. </div>
                             </div>
                             <div className={styles.count}>
                                 <div>
                                     <Counter product={i} onClick={(e) => onCount(e, i)} />
-                                    {/* <button id='minus' onClick={(e) => onCount(e, i)}>-</button>
-                                    <span id='count'>{i.count}</span>
-                                    <button id='plus' onClick={(e) => onCount(e, i)}>+</button> */}
                                 </div>
                                 <div>{i.count * +i.price}</div><div>₸</div>
                                 <ButtonIcon size={'xs'} icon={'trash'} onClick={() => removeItemCart(i)}></ButtonIcon>

@@ -8,7 +8,7 @@ export const fetchProduct = () => {
     return async (dispatch: AppDispatch) => {
         try {
             dispatch(productSlice.actions.fetching())
-            const response = await axios.get<ProductModel[]>('http://localhost:3001/products')
+            const response = await axios.get<ProductModel[]>('https://my-json-server.typicode.com/Natalia-gamr/sultan/products')
             let local = localStorage.getItem('product')
             if (local !== null) {
                 dispatch(productSlice.actions.fetchSucces(JSON.parse(local)))

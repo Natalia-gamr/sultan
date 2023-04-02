@@ -35,6 +35,11 @@
     margin-bottom: 10px;
 }
 
+.title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .descr {
     font-weight: 500;
     font-size: 16px;

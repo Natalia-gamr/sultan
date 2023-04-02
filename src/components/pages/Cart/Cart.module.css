@@ -17,8 +17,6 @@
     gap: 50px;
 }
 
-
-
 .img {
     max-height: 280px;
     display: block;
@@ -40,7 +38,27 @@
     align-items: center;
 }
 
+.val {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: #3F4E65;
+}
 
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #111111;
+    margin: 10px 0;
+}
+
+.descr {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 150%;
+    color: #3F4E65;
+}
 
 .total {
     margin-top: 50px;
@@ -64,4 +82,72 @@
     z-index: 10;
     border: 1px solid black;
     left: calc(50vw - (450px / 2));
+}
+
+@media (max-width: 1024px) {
+    .cart {
+        max-width: 95vw;
+        padding-bottom: 80px;
+    }
+
+    .card {
+        max-height: 450px;
+        padding: 40px 0;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .count {
+        gap: 18px;
+    }
+
+    .img {
+        max-height: 20vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .cart {
+        padding-bottom: 50px;
+    }
+
+    .card {
+        max-height: 450px;
+        padding: 40px 0;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .descr {
+        font-size: 10px;
+    }
+
+    .count {
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .title {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+
+    .card {
+        flex-wrap: wrap;
+    }
+
+    .descr {
+        font-size: 10px;
+    }
 }

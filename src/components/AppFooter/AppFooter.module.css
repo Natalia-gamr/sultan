@@ -72,3 +72,87 @@
 .cards {
     display: flex;
 }
+
+@media (max-width: 1024px) {
+    .wrap {
+        max-width: 95vw;
+        gap: 16px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .category {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .descr {
+        font-size: 14px;
+    }
+
+    .input input {
+        font-size: 12px;
+        line-height: 150%;
+        width: 180px;
+        height: 50px;
+        padding: 10px;
+
+        margin-top: 5px;
+    }
+
+    .input button {
+        position: absolute;
+        top: 36px;
+        right: 11px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 95vw;
+        gap: 50px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .category {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .descr {
+        max-width: 250px;
+        font-size: 14px;
+    }
+
+    .input {
+
+        width: 180px;
+
+    }
+
+    .input input {
+        font-size: 12px;
+        line-height: 150%;
+        width: 180px;
+        height: 50px;
+        padding: 10px;
+
+        margin-top: 5px;
+    }
+
+    .input button {
+        position: absolute;
+        top: 36px;
+        right: 11px;
+    }
+}
+
+@media (max-width: 425px) {}

@@ -1,5 +1,4 @@
 .wrap {
-
     max-width: 1366px;
     margin: 0 auto;
     padding-top: 45px;
@@ -52,11 +51,6 @@
     font-weight: 800;
     font-size: 30px;
     line-height: 130%;
-    /* identical to box height, or 39px */
-
-
-    /* 1 */
-
     color: #111111;
 }
 
@@ -70,19 +64,12 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 150%;
-    /* identical to box height, or 21px */
-
-
-    /* 2 */
-
     color: #3F4E65;
 
 }
 
 .brand span {
     font-weight: 500;
-
-
     color: #111111;
 
 }
@@ -90,4 +77,65 @@
 .share,
 .desc {
     margin: 30px 0;
+}
+
+@media (max-width: 1024px) {
+    .wrap {
+        max-width: 95vw;
+        padding-top: 30px;
+
+    }
+
+    .img {
+        flex-basis: 50%;
+    }
+
+    .img img {
+        height: 30vw;
+        width: auto;
+    }
+
+    .product {
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .val {
+        font-size: 10px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+    }
+
+    .img img {
+        height: 40vw;
+        width: auto;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .product {
+        gap: 20px
+    }
+
+    .img img {
+        height: 50vw;
+        width: auto;
+    }
+
+    .price,
+    .title {
+        font-size: 18px;
+    }
 }

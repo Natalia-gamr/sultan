@@ -18,3 +18,12 @@
 .active {
     border-color: var(--yellow-light);
 }
+
+@media (max-width: 768px) {
+
+
+
+    .filters {
+        flex-wrap: wrap;
+    }
+}

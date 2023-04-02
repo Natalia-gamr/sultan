@@ -38,7 +38,7 @@ export const AppHeader = () => {
             </div>
             <div className={styles.wrap}>
                 <div className={styles.header}>
-                    <NavLink to={'/'}>
+                    <NavLink to={'/'} className={styles.logo}>
                         <img src={logo} alt="" />
                     </NavLink>
 

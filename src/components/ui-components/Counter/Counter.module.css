@@ -13,3 +13,16 @@
     line-height: 130%;
     color: #3F4E65;
 }
+
+@media (max-width: 768px) {
+    .button {
+        width: 20px;
+        height: 16px;
+        margin: 0 5px;
+        font-size: 10px;
+    }
+
+    .span {
+        font-size: 12px;
+    }
+}

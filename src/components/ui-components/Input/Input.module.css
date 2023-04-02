@@ -16,3 +16,17 @@
     width: 263px;
     height: 59px;
 }
+
+@media (max-width: 1024px) {
+    .input {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .input {
+        width: 150px;
+        height: 40px;
+    }
+}

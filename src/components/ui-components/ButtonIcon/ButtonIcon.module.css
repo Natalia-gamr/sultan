@@ -49,3 +49,50 @@
     letter-spacing: 0.15em;
     padding: 0 80px;
 }
+
+@media (max-width: 1024px) {
+
+    .xs {
+        height: 30px;
+        width: 30px;
+        font-size: 16px;
+    }
+
+    .s {
+        height: 40px;
+    }
+
+    .m {
+        height: 50px;
+        font-size: 12px;
+        padding: 0 30px;
+    }
+
+    .l {
+        height: 75px;
+        font-size: 16px;
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .xs {
+        font-size: 12px;
+    }
+
+    .s {
+        height: 35px;
+    }
+
+    .m {
+        height: 40px;
+        font-size: 12px;
+        padding: 0 20px;
+    }
+
+    .l {
+        height: 50px;
+        font-size: 16px;
+        padding: 0 40px;
+    }
+}

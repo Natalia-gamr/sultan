@@ -74,7 +74,7 @@ export const SingleProduct = ({ ...props }: SingleProductProps) => {
 
                                         <ButtonIcon size={'m'} icon={'cart'} onClick={(e) => addCart(e, p)}>В корзину</ButtonIcon>
                                     </div>
-                                    <div className={styles.share}>share</div>
+                                    <div className={styles.share}></div>
                                     <div>
                                         <div className={styles.brand}>Производитель: <span>{p.manufacture}</span></div>
                                         <div className={styles.brand}>Бренд: <span>{p.brand}</span></div>
