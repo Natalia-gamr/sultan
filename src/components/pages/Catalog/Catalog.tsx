@@ -1,6 +1,6 @@
 import styles from './Catalog.module.css'
 import cn from 'classnames'
-import { Htag } from '../../Htag/Htag';
+import { Htag } from '../../ui-components/Htag/Htag';
 import { Card } from '../../Card/Card';
 import { CatalogFilter } from '../../CatalogFilter/CatalogFilter';
 import { fetchProduct } from '../../../store/actions/productActions';
@@ -102,13 +102,17 @@ export const Catalog = () => {
                         <ReactPaginate
                             breakLabel="..."
                             nextLabel=" >"
+                            previousLabel="<"
+
                             onPageChange={handlePageClick}
                             pageRangeDisplayed={3}
                             pageCount={pageCount}
+
                             containerClassName={styles.flex}
-                            previousLabel="< "
+                            previousLinkClassName={styles.prev}
+                            nextLinkClassName={styles.next}
                             pageClassName={styles.li}
-                            activeLinkClassName={styles.active}
+                            activeClassName={styles.activeLi}
                         /> : <></>}
 
                 </div>

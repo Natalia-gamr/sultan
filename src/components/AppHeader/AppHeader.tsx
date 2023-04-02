@@ -5,14 +5,16 @@ import mail from '../../resources/icons/mail.svg'
 import cart from './cart.svg'
 
 import consultation from '../../resources/img/consultation.png'
-import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
-import { SearchInput } from '../Input/Input'
+import { ButtonIcon } from '../ui-components/ButtonIcon/ButtonIcon'
+import { SearchInput } from '../ui-components/Input/Input'
 import { NavLink } from 'react-router-dom'
 import { useAppSelector } from '../../hooks/redux'
 
 export const AppHeader = () => {
 
     const { items, totalPrice } = useAppSelector(state => state.cartReducer)
+    const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
+
 
     return (
         <div>
@@ -70,7 +72,7 @@ export const AppHeader = () => {
                     <NavLink to={'/cart'} className={styles.cart}>
                         <div className={styles.cartImg}>
                             <img src={cart} alt="" />
-                            <span>{items.length}
+                            <span>{totalCount}
                             </span>
                         </div>
 

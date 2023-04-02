@@ -9,5 +9,5 @@ export interface ProductModel {
     "descr": string,
     "price": string,
     "care": string,
-    "count"?: number
+    "count": number
 }

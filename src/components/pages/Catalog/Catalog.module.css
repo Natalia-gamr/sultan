@@ -1,7 +1,6 @@
 .catalog {
     max-width: 1366px;
     margin: 0 auto;
-    padding-top: 45px;
 }
 
 .head {
@@ -20,18 +19,6 @@
 .sales {
     width: 1020px;
     margin-left: 0;
-}
-
-.flex {
-    display: flex;
-    margin-right: 5px;
-
-}
-
-.li {
-    margin-right: 5px;
-    display: block;
-
 }
 
 li {
@@ -70,5 +57,37 @@ li {
     line-height: 150%;
     font-weight: 400;
     color: var(--gray-dark);
+
+}
+
+.flex {
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.li {
+    display: block;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    color: var(--gray-dark);
+    transition: all 0.3s;
+}
+
+.prev,
+.next {
+    color: var(--yellow);
+    margin: 0 35px;
+}
+
+.activeLi {
+    background-color: rgba(254, 202, 110, 0.3);
 
 }

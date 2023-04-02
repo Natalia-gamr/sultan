@@ -7,7 +7,7 @@ export const fetchFilters = () => {
     return async (dispatch: AppDispatch) => {
         try {
             dispatch(filterSlice.actions.fetching())
-            const response = await axios.get<FilterModel[]>('https://my-json-server.typicode.com/Natalia-gamr/sultan/filter')
+            const response = await axios.get<FilterModel[]>('http://localhost:3001/filter')
             dispatch(filterSlice.actions.fetchSucces(response.data))
         } catch (e) {
             dispatch(filterSlice.actions.fetchError(e as Error))

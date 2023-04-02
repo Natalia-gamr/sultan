@@ -5,3 +5,142 @@
 .block {
     display: block;
 }
+
+.wrap {
+    max-width: 1366px;
+    margin: 0 auto;
+    position: relative;
+}
+
+form {
+    position: fixed;
+    z-index: 10;
+    width: 600px;
+    background-color: var(--white);
+    top: calc(50vh - 450px/2);
+    left: calc(50vw - 300px);
+    border: 1px solid var(--gray-dark);
+    padding: 20px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card {
+    display: grid;
+    position: relative;
+    grid-template-columns: 350px 1fr;
+    margin: 50px 0;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(63, 78, 101, 0.3);
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cardTitle div {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card span {
+    font-size: 18px;
+    font-weight: normal;
+
+}
+
+.card img {
+    max-height: 250px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.card button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+}
+
+.openButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.checks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.checks label {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 180px;
+    font-size: 14px;
+
+}
+
+.formTitle {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    font-size: 12px;
+}
+
+.form input {
+    width: 250px;
+}
+
+.addButton {
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+}
+
+.careButton {
+    background-color: var(--white);
+    max-width: 200px;
+    padding: 5px;
+    border: 1px solid var(--yellow);
+    transition: all 0.3s;
+}
+
+.careButton:hover {
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+form span {
+    font-size: 12px;
+}

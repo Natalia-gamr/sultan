@@ -1,6 +1,6 @@
 
 export const Main = () => {
     return (
-        <h1 >Main page</h1>
+        <h1 style={{ maxWidth: '1366px' }}>Main page</h1>
     )
 }

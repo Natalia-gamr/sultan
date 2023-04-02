@@ -1,9 +1,14 @@
 .button {
     background: var(--yellow-light);
     border-radius: 80px;
-    border: none;
     color: var(--white);
+    border: none;
     font-weight: 700;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: var(--yellow);
 }
 
 .xs {

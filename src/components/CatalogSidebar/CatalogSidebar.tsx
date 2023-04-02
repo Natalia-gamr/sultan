@@ -2,12 +2,12 @@
 import { ChangeEvent, useEffect, useState, MouseEvent } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { FilterSidebar, productSlice } from '../../reducers/ProductSlice';
-import { Button } from '../Button/Button';
-import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
+import { Button } from '../ui-components/Button/Button';
+import { ButtonIcon } from '../ui-components/ButtonIcon/ButtonIcon';
 import styles from './CatalogSidebar.module.css'
 import cn from 'classnames'
 import { CatalogFilter } from '../CatalogFilter/CatalogFilter';
-import { SearchInput } from '../Input/Input';
+import { SearchInput } from '../ui-components/Input/Input';
 
 export const CatalogSidebar = () => {
     const { productsContainer } = useAppSelector(state => state.productReducer)
@@ -72,6 +72,8 @@ export const CatalogSidebar = () => {
         dispatch(productSlice.actions.deleteFilterSidebar(filter))
 
         filter.items = []
+        filter.minPrice = 42
+        filter.maxPrice = 347
         deleteCheck(e);
     }
 

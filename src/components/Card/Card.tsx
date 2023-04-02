@@ -1,7 +1,7 @@
 import { CardProps } from './Card.props'
 import styles from './Card.module.css'
 import cn from 'classnames'
-import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
+import { ButtonIcon } from '../ui-components/ButtonIcon/ButtonIcon';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../hooks/redux';
 import { addItem } from '../../reducers/CartSlice';

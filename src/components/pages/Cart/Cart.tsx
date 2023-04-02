@@ -1,15 +1,16 @@
 import { CartProps } from './Cart.props'
 import styles from './Cart.module.css'
-import { Htag } from '../../Htag/Htag';
+import { Htag } from '../../ui-components/Htag/Htag';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { Card } from '../../Card/Card';
 import { NavLink } from 'react-router-dom';
 import { MouseEvent } from 'react'
 import cn from 'classnames'
-import { ButtonIcon } from '../../ButtonIcon/ButtonIcon';
+import { ButtonIcon } from '../../ui-components/ButtonIcon/ButtonIcon';
 import { clearItems, removeItem } from '../../../reducers/CartSlice';
 import { ProductModel } from '../../../interfaces/product.interface';
-import { Button } from '../../Button/Button';
+import { Button } from '../../ui-components/Button/Button';
+import { Counter } from '../../ui-components/Counter/Counter';
 
 export const Cart = ({ ...props }: CartProps) => {
 
@@ -20,19 +21,58 @@ export const Cart = ({ ...props }: CartProps) => {
         dispatch(removeItem(i))
     }
     const sendCart = (e: MouseEvent) => {
-        let target = e.currentTarget.parentElement
-        if (target !== null) {
-            target.nextElementSibling?.classList.add(cn(styles.popupBlock))
-        }
-        setTimeout(() => {
-
-            console.log(target)
+        if (window.confirm('Оформить заказ?')) {
+            let target = e.currentTarget.parentElement
             if (target !== null) {
-                target.nextElementSibling?.classList.remove(cn(styles.popupBlock))
+                target.nextElementSibling?.classList.add(cn(styles.popupBlock))
             }
-        }, 3000)
+            setTimeout(() => {
 
-        dispatch(clearItems())
+                console.log(target)
+                if (target !== null) {
+                    target.nextElementSibling?.classList.remove(cn(styles.popupBlock))
+                }
+            }, 3000)
+
+            dispatch(clearItems())
+        }
+
+    }
+
+
+    const onCount = (e: MouseEvent, p: ProductModel) => {
+
+        let arr = e.currentTarget.parentElement
+
+        let count = arr?.children.namedItem('count')
+        let totalPriceItem = arr?.nextSibling
+        let totalPrice = arr?.parentElement?.parentElement?.parentElement?.nextElementSibling?.children.namedItem('totalPrice')?.firstElementChild
+        // console.log(totalPrice)
+
+        if (e.currentTarget.id === 'minus' &&
+            count && count.textContent &&
+            count.textContent !== '0' &&
+            totalPriceItem &&
+            totalPriceItem.textContent !== null &&
+            totalPrice &&
+            totalPrice.textContent !== null) {
+
+            count.textContent = `${+count.textContent - 1}`
+            totalPriceItem.textContent = `${+totalPriceItem.textContent - +p.price}`
+            totalPrice.textContent = `${+totalPrice.textContent - +p.price}`
+        }
+        if (e.currentTarget.id === 'plus' &&
+            count && count.textContent &&
+            totalPriceItem &&
+            totalPriceItem.textContent !== null &&
+            totalPrice &&
+            totalPrice.textContent !== null) {
+
+            count.textContent = `${+count.textContent + 1}`
+            totalPriceItem.textContent = `${+totalPriceItem.textContent + +p.price}`
+            totalPrice.textContent = `${+totalPrice.textContent + +p.price}`
+
+        }
     }
 
     return (
@@ -42,7 +82,7 @@ export const Cart = ({ ...props }: CartProps) => {
             </div>
             <Htag tag={'h2'}>Корзина</Htag>
 
-            <div className={styles.cards}>
+            <div>
                 {items.map(i => {
                     return (
                         <div className={styles.card}>
@@ -53,8 +93,13 @@ export const Cart = ({ ...props }: CartProps) => {
                                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. </div>
                             </div>
                             <div className={styles.count}>
-                                <div><button disabled>-</button>{1}<button disabled>+</button></div>
-                                <div>{i.price} ₸</div>
+                                <div>
+                                    <Counter product={i} onClick={(e) => onCount(e, i)} />
+                                    {/* <button id='minus' onClick={(e) => onCount(e, i)}>-</button>
+                                    <span id='count'>{i.count}</span>
+                                    <button id='plus' onClick={(e) => onCount(e, i)}>+</button> */}
+                                </div>
+                                <div>{i.count * +i.price}</div><div>₸</div>
                                 <ButtonIcon size={'xs'} icon={'trash'} onClick={() => removeItemCart(i)}></ButtonIcon>
                             </div>
 
@@ -66,7 +111,8 @@ export const Cart = ({ ...props }: CartProps) => {
             <div className={styles.total}>
                 <Button className={styles.button} onClick={sendCart} size={'m'}>Оформить заказ</Button>
 
-                <div>{totalPrice} ₸</div>
+                <div id='totalPrice'><span>{totalPrice} </span> ₸</div>
+
             </div>
             <div className={styles.popup}>Спасибо за заказ</div>
         </div>

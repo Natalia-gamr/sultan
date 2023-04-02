@@ -1,10 +1,14 @@
 import { SingleProductProps } from './SingleProduct.props'
 import styles from './SingleProduct.module.css'
 import { NavLink, useParams } from 'react-router-dom';
+import { MouseEvent, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { useEffect } from 'react';
 import { fetchProduct } from '../../../store/actions/productActions';
-import { ButtonIcon } from '../../ButtonIcon/ButtonIcon';
+import { ButtonIcon } from '../../ui-components/ButtonIcon/ButtonIcon';
+import { ProductModel } from '../../../interfaces/product.interface';
+import { addItem } from '../../../reducers/CartSlice';
+import { Counter } from '../../ui-components/Counter/Counter';
 
 export const SingleProduct = ({ ...props }: SingleProductProps) => {
 
@@ -15,6 +19,36 @@ export const SingleProduct = ({ ...props }: SingleProductProps) => {
     useEffect(() => {
         dispatch(fetchProduct())
     }, [dispatch])
+
+    let countItem: number = 1
+
+    const onCount = (e: MouseEvent, p: ProductModel) => {
+
+        let arr = e.currentTarget.parentElement?.children
+
+        let count = arr?.namedItem('count')
+        if (e.currentTarget.id === 'minus' && count && count.textContent && count.textContent !== '0') {
+            count.textContent = `${+count.textContent - 1}`
+        }
+        if (e.currentTarget.id === 'plus' && count && count.textContent) {
+            count.textContent = `${+count.textContent + 1}`
+        }
+
+        if (count?.textContent) {
+            countItem = +count?.textContent
+            console.log(countItem)
+
+            return countItem
+        }
+
+    }
+    const addCart = (e: MouseEvent, p: ProductModel) => {
+
+        for (let i = 0; i < countItem; i++) {
+            dispatch(addItem(p))
+
+        }
+    }
 
     return (
         <div className={styles.wrap} {...props}>
@@ -33,10 +67,12 @@ export const SingleProduct = ({ ...props }: SingleProductProps) => {
                                     <div className={styles.val}>{p.val} {p.type}</div>
                                     <div className={styles.priceWrap}>
                                         <div className={styles.price}> {p.price} ₸</div>
-                                        <div><button disabled>-</button>{p.count || 0 + 0}<button disabled>+</button></div>
+                                        <div>
+                                            <Counter product={p} onClick={(e) => onCount(e, p)}></Counter>
+                                        </div>
 
 
-                                        <ButtonIcon disabled size={'m'} icon={'cart'}>В корзину</ButtonIcon>
+                                        <ButtonIcon size={'m'} icon={'cart'} onClick={(e) => addCart(e, p)}>В корзину</ButtonIcon>
                                     </div>
                                     <div className={styles.share}>share</div>
                                     <div>
