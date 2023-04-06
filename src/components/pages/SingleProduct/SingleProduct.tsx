@@ -1,16 +1,16 @@
-import { SingleProductProps } from './SingleProduct.props'
-import styles from './SingleProduct.module.css'
+import { useEffect, MouseEvent } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
-import { MouseEvent, useState } from 'react';
+
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
-import { useEffect } from 'react';
-import { fetchProduct } from '../../../store/actions/productActions';
-import { ButtonIcon } from '../../ui-components/ButtonIcon/ButtonIcon';
 import { ProductModel } from '../../../interfaces/product.interface';
+import { fetchProduct } from '../../../store/actions/productActions';
 import { addItem } from '../../../reducers/CartSlice';
+
+import styles from './SingleProduct.module.css'
+import { ButtonIcon } from '../../ui-components/ButtonIcon/ButtonIcon';
 import { Counter } from '../../ui-components/Counter/Counter';
 
-export const SingleProduct = ({ ...props }: SingleProductProps) => {
+export const SingleProduct = () => {
 
     const dispatch = useAppDispatch()
     const params = useParams<'barecode'>()
@@ -23,44 +23,38 @@ export const SingleProduct = ({ ...props }: SingleProductProps) => {
     let countItem: number = 1
 
     const onCount = (e: MouseEvent, p: ProductModel) => {
-
         let arr = e.currentTarget.parentElement?.children
-
         let count = arr?.namedItem('count')
+
         if (e.currentTarget.id === 'minus' && count && count.textContent && count.textContent !== '0') {
             count.textContent = `${+count.textContent - 1}`
         }
+
         if (e.currentTarget.id === 'plus' && count && count.textContent) {
             count.textContent = `${+count.textContent + 1}`
         }
 
         if (count?.textContent) {
             countItem = +count?.textContent
-            console.log(countItem)
-
             return countItem
         }
-
     }
-    const addCart = (e: MouseEvent, p: ProductModel) => {
 
+    const addCart = (e: MouseEvent, p: ProductModel) => {
         for (let i = 0; i < countItem; i++) {
             dispatch(addItem(p))
-
         }
     }
 
     return (
-        <div className={styles.wrap} {...props}>
+        <div className={styles.wrap} >
             {productsContainer.map(p => {
                 if (p.barecode === params.barecode) {
                     return (
                         <div key={p.barecode}>
                             <div><NavLink to={'/'}>Главная</NavLink> / <NavLink to={'/catalog'}>Каталог</NavLink> / <NavLink to={`/catalog/${p.barecode}`}>{p.title}</NavLink></div>
                             <div className={styles.product}>
-
                                 <div className={styles.img}><img src={p.url} alt={p.title} /></div>
-
                                 <div className={styles.prodWrap}>
                                     <p className={styles.inStock}>В наличии</p>
                                     <div className={styles.title}>{p.title} <span className={styles.descr}>{p.descr}</span> </div>
@@ -70,8 +64,6 @@ export const SingleProduct = ({ ...props }: SingleProductProps) => {
                                         <div>
                                             <Counter product={p} onClick={(e) => onCount(e, p)}></Counter>
                                         </div>
-
-
                                         <ButtonIcon size={'m'} icon={'cart'} onClick={(e) => addCart(e, p)}>В корзину</ButtonIcon>
                                     </div>
                                     <div className={styles.share}></div>
@@ -97,12 +89,9 @@ export const SingleProduct = ({ ...props }: SingleProductProps) => {
                                         <div className={styles.brand}>Объем: <span>{p.val}{p.type}</span></div>
                                         <div className={styles.brand}>Кол-во в коробке: <span>{p.val}{p.type}</span></div>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
-
                     )
                 }
             })}

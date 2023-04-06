@@ -1,17 +1,9 @@
-.wrap {
-    max-width: 1920px;
-    margin: 0 auto;
-    border-top: 1px solid #3f4e6520;
-    border-bottom: 1px solid #3f4e6520;
-    margin-bottom: 50px;
-
-}
-
 .menu {
     display: flex;
     justify-content: space-between;
     max-width: 1366px;
     margin: 14px auto;
+    align-items: center;
 }
 
 .menuItem {
@@ -26,7 +18,6 @@
 }
 
 .infoTitle {
-    display: block;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
@@ -39,6 +30,20 @@
     line-height: 16px;
 }
 
+.link {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-dark);
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+    border-top: 1px solid #3f4e6520;
+    border-bottom: 1px solid #3f4e6520;
+    margin-bottom: 50px;
+}
+
 .header {
     display: flex;
     max-width: 1366px;
@@ -48,17 +53,9 @@
     justify-content: space-between;
 }
 
-.catalog {
-    padding: 10px 19px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    width: 192px;
-    height: 59px;
+.buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .search {
@@ -73,11 +70,6 @@
     height: 39px;
     top: 10px;
     right: 10px;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
 }
 
 .consultation {
@@ -107,18 +99,6 @@
     line-height: 150%;
     text-decoration: underline;
 
-}
-
-.price {
-    width: 200px;
-    height: 59px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
 }
 
 .cart {
@@ -160,13 +140,6 @@
     font-weight: 600;
     font-size: 14px;
     color: var(--black);
-}
-
-.link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    color: var(--gray-dark);
 }
 
 @media (max-width: 1024px) {
@@ -246,5 +219,4 @@
     .infoTitle {
         font-size: 10px;
     }
-
 }

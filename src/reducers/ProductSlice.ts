@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { FilterModel } from '../interfaces/filter.interface';
 import { ProductModel } from '../interfaces/product.interface'
 

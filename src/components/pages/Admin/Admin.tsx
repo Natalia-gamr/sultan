@@ -1,8 +1,10 @@
 import { MouseEvent, FormEvent, ChangeEvent } from "react"
-import { useAppSelector } from "../../../hooks/redux"
-import styles from './Admin.module.css'
 import cn from 'classnames'
+
+import { useAppSelector } from "../../../hooks/redux"
 import { ProductModel } from "../../../interfaces/product.interface"
+
+import styles from './Admin.module.css'
 import { Htag } from "../../ui-components/Htag/Htag"
 import { Button } from "../../ui-components/Button/Button"
 import { ButtonIcon } from "../../ui-components/ButtonIcon/ButtonIcon"
@@ -115,7 +117,6 @@ export const Admin = () => {
         <div className={styles.wrap}>
             <Htag tag={'h2'} >Admin page</Htag>
             <Button onClick={onClickHandler} size={"m"} className={styles.openButton}>Добавить товар</Button>
-
             <form className={styles.none} onSubmit={addForm}>
                 <div className={styles.formTitle}>Добавление товара</div>
                 <Button size={'xs'} onClick={onFormNone} className={styles.closeButton}>х</Button>
@@ -130,7 +131,6 @@ export const Admin = () => {
                     <div><label htmlFor="barecode">Штрихкод</label><input name='barecode' type="number" required /></div>
                     <div><label htmlFor="url">Изображение (url)</label><input name='url' type="text" required /></div>
                 </div>
-
                 <div>Выберите тип ухода <span>(выберите и кликните 'Применить')</span>:</div>
                 <div className={styles.checks} id='care'>
                     {filters.map(f => {
@@ -147,7 +147,6 @@ export const Admin = () => {
                 </div>
                 <Button size={"s"} className={styles.addButton}>Добавить товар</Button>
             </form>
-
             {productsContainer.map(p => {
                 return (
                     <div id={p.barecode} key={p.barecode} className={styles.card}>
@@ -166,7 +165,6 @@ export const Admin = () => {
                             <div id="brand">brand: <span>{p.brand}</span></div>
                             <div id="care">care: <span>{p.care}</span></div>
                         </div>
-
                     </div>
                 )
             })}

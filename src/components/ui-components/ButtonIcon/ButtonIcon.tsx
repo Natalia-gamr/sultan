@@ -1,6 +1,7 @@
+import cn from 'classnames'
+
 import { ButtonIconProps, icons } from './ButtonIcon.props'
 import styles from './ButtonIcon.module.css'
-import cn from 'classnames'
 
 export const ButtonIcon = ({ children, icon, size, className, ...props }: ButtonIconProps) => {
     const IconComp = icons[icon];

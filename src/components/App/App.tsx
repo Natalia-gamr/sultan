@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
-import { AppHeader } from '../AppHeader/AppHeader';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+
 import '../../styles/globals.css'
+import { useAppDispatch } from '../../hooks/redux';
+import { fetchFilters } from '../../store/actions/filtersActions';
+
+import { AppHeader } from '../AppHeader/AppHeader';
 import { Catalog } from '../pages/Catalog/Catalog';
 import { Cart } from '../pages/Cart/Cart';
-import { useAppDispatch } from '../../hooks/redux';
-import { HashRouter, Route, Routes } from 'react-router-dom';
-import { fetchFilters } from '../../store/actions/filtersActions';
 import { SingleProduct } from '../pages/SingleProduct/SingleProduct';
 import { Main } from '../pages/Main/Main';
 import { Admin } from '../pages/Admin/Admin';

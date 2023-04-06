@@ -1,9 +1,11 @@
 import { MouseEvent, useEffect, useState } from 'react';
+import cn from 'classnames'
+
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { FilterModel } from '../../interfaces/filter.interface';
 import { productSlice } from '../../reducers/ProductSlice';
+
 import styles from './CatalogFilter.module.css'
-import cn from 'classnames'
 import { FilterProps } from './CatalogFilter.props';
 
 export const CatalogFilter = ({ className }: FilterProps) => {

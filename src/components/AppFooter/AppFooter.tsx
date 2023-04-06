@@ -1,11 +1,13 @@
+import { NavLink } from 'react-router-dom'
+
 import { ButtonIcon } from '../ui-components/ButtonIcon/ButtonIcon'
 import styles from './AppFooter.module.css'
+
 import logo from '../../resources/icons/logo-white.svg'
 import wapp from '../../resources/icons/wapp.svg'
 import mcard from '../../resources/icons/mcard.svg'
 import visa from '../../resources/icons/Visa.svg'
 import telegram from '../../resources/icons/telegram.svg'
-import { NavLink } from 'react-router-dom'
 
 
 
@@ -21,9 +23,8 @@ export const AppFooter = () => {
                         "под ключ" в Кокчетаве и Акмолинской области</div>
                     <div className={styles.input}>
                         <div>Подпишись на скидки и акции</div>
-                        <input className={styles.title} type="text" placeholder='Введите ваш E-mail' />
+                        <input type="text" placeholder='Введите ваш E-mail' />
                         <ButtonIcon size={'xs'} icon={'arrow'}></ButtonIcon>
-
                     </div>
                 </div>
                 <div>
@@ -73,10 +74,8 @@ export const AppFooter = () => {
                             <img src={visa} alt="" /><img src={mcard} alt="" />
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     )
 }

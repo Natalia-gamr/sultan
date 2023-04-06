@@ -1,5 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
-import { FilterModel } from "../../interfaces/filter.interface";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 
 

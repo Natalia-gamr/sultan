@@ -3,7 +3,6 @@ import { ProductModel } from "../../interfaces/product.interface"
 import { productSlice } from "../../reducers/ProductSlice"
 import { AppDispatch } from "../store"
 
-
 export const fetchProduct = () => {
     return async (dispatch: AppDispatch) => {
         try {
@@ -15,7 +14,6 @@ export const fetchProduct = () => {
             } else {
                 dispatch(productSlice.actions.fetchSucces(response.data))
             }
-
         } catch (e) {
             dispatch(productSlice.actions.fetchError(e as Error))
         }

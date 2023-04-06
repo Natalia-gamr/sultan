@@ -1,11 +1,13 @@
-
 import { ChangeEvent, useEffect, useState, MouseEvent } from 'react';
+import cn from 'classnames'
+
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { FilterSidebar, productSlice } from '../../reducers/ProductSlice';
+
+import styles from './CatalogSidebar.module.css'
+
 import { Button } from '../ui-components/Button/Button';
 import { ButtonIcon } from '../ui-components/ButtonIcon/ButtonIcon';
-import styles from './CatalogSidebar.module.css'
-import cn from 'classnames'
 import { CatalogFilter } from '../CatalogFilter/CatalogFilter';
 import { SearchInput } from '../ui-components/Input/Input';
 

@@ -1,16 +1,19 @@
-import styles from './Catalog.module.css'
+import { useEffect, useState } from 'react';
+import ReactPaginate from 'react-paginate';
+import { NavLink } from 'react-router-dom';
 import cn from 'classnames'
-import { Htag } from '../../ui-components/Htag/Htag';
+
+import { fetchProduct } from '../../../store/actions/productActions';
+import { fetchFilters } from '../../../store/actions/filtersActions';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import { ProductModel } from '../../../interfaces/product.interface';
+
+import styles from './Catalog.module.css'
 import { Card } from '../../Card/Card';
 import { CatalogFilter } from '../../CatalogFilter/CatalogFilter';
-import { fetchProduct } from '../../../store/actions/productActions';
-import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
-import { fetchFilters } from '../../../store/actions/filtersActions';
-import { ProductModel } from '../../../interfaces/product.interface';
-import ReactPaginate from 'react-paginate';
 import { CatalogSidebar } from '../../CatalogSidebar/CatalogSidebar';
-import { NavLink } from 'react-router-dom';
+import { Htag } from '../../ui-components/Htag/Htag';
+import { Spinner } from '../../ui-components/Spinner/Spinner';
 
 const ITEMS_PER_PAGE = 9
 
@@ -40,10 +43,8 @@ export const Catalog = () => {
             })
             setData(sorted);
         }
-
         sortArray(sortType);
     }, [products, sortType]);
-
 
     useEffect(() => {
         dispatch(fetchProduct())
@@ -87,10 +88,8 @@ export const Catalog = () => {
             <div className={styles.wrap}>
                 <CatalogSidebar />
                 <div className={cn(styles.sales)}>
-
-
                     <div className={styles.cards}>
-                        {isLoadingProducts && <p>Loading</p>}
+                        {isLoadingProducts && <Spinner />}
                         {errorProducts && <p>{errorProducts}</p>}
                         {currentItems && currentItems.map(product => {
                             return (
@@ -114,11 +113,8 @@ export const Catalog = () => {
                             pageClassName={styles.li}
                             activeClassName={styles.activeLi}
                         /> : <></>}
-
                 </div>
             </div>
-
         </div>
-
     )
 };

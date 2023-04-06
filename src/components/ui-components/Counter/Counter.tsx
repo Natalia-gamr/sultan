@@ -2,7 +2,6 @@ import { CounterProps } from './Counter.props'
 import styles from './Counter.module.css'
 
 export const Counter = ({ onClick, product }: CounterProps) => {
-
     return (
         <>
             <button id='minus' onClick={onClick} className={styles.button}>-</button>
