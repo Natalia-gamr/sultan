@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sultan/static/css/main.012ee063.css",
-    "main.js": "/sultan/static/js/main.3ccbf196.js",
+    "main.css": "/sultan/static/css/main.3ca5c822.css",
+    "main.js": "/sultan/static/js/main.3299c3ca.js",
     "static/media/logo.svg": "/sultan/static/media/logo.787b66ae53c72b91732bd24aa716ab17.svg",
     "static/media/logo-white.svg": "/sultan/static/media/logo-white.aeedaab65d9efeb0dd319ee0ea2c4c88.svg",
     "static/media/mcard.svg": "/sultan/static/media/mcard.4c7fe5d11cb20687898e3f028b4546bc.svg",
@@ -18,11 +18,11 @@
     "static/media/search.svg": "/sultan/static/media/search.9e1d9576e32ff95c6e74b0b879b4fa8a.svg",
     "static/media/download.svg": "/sultan/static/media/download.e7871a54009d32c25a9d6309214fe536.svg",
     "static/media/arrow.svg": "/sultan/static/media/arrow.35ab94e2f8817f324bd31c2293385fa8.svg",
-    "main.012ee063.css.map": "/sultan/static/css/main.012ee063.css.map",
-    "main.3ccbf196.js.map": "/sultan/static/js/main.3ccbf196.js.map"
+    "main.3ca5c822.css.map": "/sultan/static/css/main.3ca5c822.css.map",
+    "main.3299c3ca.js.map": "/sultan/static/js/main.3299c3ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.012ee063.css",
-    "static/js/main.3ccbf196.js"
+    "static/css/main.3ca5c822.css",
+    "static/js/main.3299c3ca.js"
   ]
 }
