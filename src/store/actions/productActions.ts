@@ -10,9 +10,9 @@ export const fetchProduct = () => {
             const response = await axios.get<ProductModel[]>('https://my-json-server.typicode.com/Natalia-gamr/sultan/products')
             let local = localStorage.getItem('product')
             if (local !== null) {
-                dispatch(productSlice.actions.fetchSucces(JSON.parse(local)))
+                dispatch(productSlice.actions.fetchSuccess(JSON.parse(local)))
             } else {
-                dispatch(productSlice.actions.fetchSucces(response.data))
+                dispatch(productSlice.actions.fetchSuccess(response.data))
             }
         } catch (e) {
             dispatch(productSlice.actions.fetchError(e as Error))

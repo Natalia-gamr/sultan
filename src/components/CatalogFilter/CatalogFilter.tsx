@@ -32,13 +32,11 @@ export const CatalogFilter = ({ className }: FilterProps) => {
         }
         e.currentTarget.setAttribute('active', '')
         e.currentTarget.classList.add(cn(styles.active))
-        console.log(e.currentTarget.name)
 
         if (e.currentTarget.name === "Все") {
             setFilter(() => ({ name: '', id: '' }))
         } else {
             setFilter(() => ({ name: e.currentTarget.name.toLowerCase(), id: e.currentTarget.value }))
-
         }
     }
 

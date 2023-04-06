@@ -21,10 +21,11 @@ export const filterSlice = createSlice({
         fetching(state) {
             state.isLoadingFilter = true
         },
-        fetchSucces(state, action: PayloadAction<FilterModel[]>) {
+        fetchSuccess(state, action: PayloadAction<FilterModel[]>) {
             state.isLoadingFilter = false
             state.filters = action.payload
-        }, fetchError(state, action: PayloadAction<Error>) {
+        },
+        fetchError(state, action: PayloadAction<Error>) {
             state.isLoadingFilter = false
             state.error = action.payload.message
         },

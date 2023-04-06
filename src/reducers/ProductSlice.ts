@@ -4,7 +4,7 @@ import { FilterModel } from '../interfaces/filter.interface';
 import { ProductModel } from '../interfaces/product.interface'
 
 
-interface ProductState {
+export interface ProductState {
     products: ProductModel[]
     productsContainer: ProductModel[]
     isLoadingProducts: boolean
@@ -42,27 +42,24 @@ export const productSlice = createSlice({
         fetching(state) {
             state.isLoadingProducts = true
         },
-        fetchSucces(state, action: PayloadAction<ProductModel[]>) {
+        fetchSuccess(state, action: PayloadAction<ProductModel[]>) {
             state.isLoadingProducts = false
             state.products = action.payload
             state.productsContainer = action.payload
-
-
-        }, fetchError(state, action: PayloadAction<Error>) {
+        },
+        fetchError(state, action: PayloadAction<Error>) {
             state.isLoadingProducts = false
             state.errorProducts = action.payload.message
         },
         filter(state, action: PayloadAction<FilterModel>) {
             state.products = state.productsContainer
                 .filter(a => a.care.includes(action.payload.name))
-
         },
         filterSidebar(state, action) {
             state.filterSidebar.minPrice = action.payload.minPrice
             state.filterSidebar.maxPrice = action.payload.maxPrice
 
             if (action.payload.items.length !== 0) {
-
                 state.filterSidebar.items = action.payload.items
 
                 state.products = state.productsContainer

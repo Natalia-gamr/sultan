@@ -30,7 +30,7 @@
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"npx json-server db.json --port 3001\"",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -54,7 +54,8 @@
     ]
   },
   "devDependencies": {
+    "@jest/globals": "^29.5.0",
     "gh-pages": "^5.0.0",
-    "jest": "^27.5.1"
+    "ts-jest": "^29.1.0"
   }
 }

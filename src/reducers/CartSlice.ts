@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ProductModel } from '../interfaces/product.interface';
 import { calcTotalPrice } from '../utils/calcTotalPrice';
 
-interface CartState {
+export interface CartState {
     totalPrice: number
     totalCount: number
     items: ProductModel[]
@@ -30,10 +30,7 @@ export const cartSlice = createSlice({
                 });
             }
             state.totalPrice = calcTotalPrice(state.items);
-
-            state.items.map(i => {
-                state.totalCount = i.count
-            })
+            state.totalCount = state.items.reduce((sum: number, item: any) => sum + item.count, 0)
         },
         minusItem(state, action: PayloadAction<ProductModel>) {
             const findItem = state.items.find((obj) => obj.barecode === action.payload.barecode);
@@ -43,14 +40,18 @@ export const cartSlice = createSlice({
             }
 
             state.totalPrice = calcTotalPrice(state.items);
+            state.totalCount = state.items.reduce((sum: number, item: any) => sum + item.count, 0)
         },
         removeItem(state, action) {
             state.items = state.items.filter(obj => obj.barecode !== action.payload.barecode)
-            state.totalPrice -= +action.payload.price
+            state.totalPrice = calcTotalPrice(state.items);
+            state.totalCount = state.items.reduce((sum: number, item: any) => sum + item.count, 0)
+
         },
         clearItems(state) {
             state.items = []
             state.totalPrice = 0
+            state.totalCount = 0
         }
     }
 })

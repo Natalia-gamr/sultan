@@ -14,8 +14,8 @@ import consultation from '../../resources/img/consultation.png'
 
 export const AppHeader = () => {
 
-    const { items, totalPrice } = useAppSelector(state => state.cartReducer)
-    const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
+    const { totalPrice, totalCount } = useAppSelector(state => state.cartReducer)
+    // const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
 
     return (
         <div>
